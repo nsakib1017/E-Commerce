@@ -1,0 +1,13 @@
+<head>
+    <title> Home </title>
+</head>
+
+<body><h1>Working...</h1>
+    <%target.forEach(function(item){ %>
+        <% if(item.acc!= null) { %>
+        <li><%= item.acc %></li>
+            <p> Balance: <%= item.amount %> </p>
+        <% } %>
+    <% }) %>
+    <a href='/'> Back </a>
+</body>

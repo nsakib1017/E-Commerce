@@ -1,0 +1,34 @@
+<head>
+    <title>Bootstrap Theme Company Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+  }
+  </style>
+</head>
+
+<body>
+
+<div class="jumbotron text-center">
+  <h1>eCommerceCompany</h1> 
+  <p></p> 
+  <form id="land" method="post" action="/login" class="form-inline">
+    <div class="input-group">
+      <input type="text" class="form-control" size="50" name="uname" placeholder="Username" required>
+      <input type="password" class="form-control" size="50" name="upass" placeholder="Password" required>
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Login</button>
+      </div>
+    </div>
+  </form>
+  <a href="/register">Don't have an account? Sign up! </a>
+</div>
+
+</body>
+</html>

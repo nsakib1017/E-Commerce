@@ -1,0 +1,21 @@
+<head>
+    <title> Home </title>
+</head>
+
+<body><h1>Working...</h1>
+    <%orders.forEach(function(item){ %>
+        <% if(item.value.orderID!= null) { %>
+        <li><%= item.value.orderID %></li>
+        <p> <%= item.value.hoodie %> Hoodies, <%= item.value.sneakers %> Sneakers and <%= item.value.fitbit %> Fitbits
+        <form id="delete" method="post" action="/validate/<%= item.value.orderID %>">
+            <input type="hidden" name="amount" value = "<%= item.value.orderAmount %>">
+            <input type="hidden" name="sender" value = "<%= item.value.sender %>">
+            <input type="hidden" name="recipient" value = "<%= item.value.recipient %>">
+            <input type="hidden" name="id" value = "<%= item.value.id %>">
+            <input type="hidden" name="rev" value = "<%= item.value.rev %>">
+            <input type="submit" value="Supply">
+        </form>
+        <% } %>
+    <% }) %>
+  
+</body>

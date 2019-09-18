@@ -1,0 +1,15 @@
+<head>
+    <title> Update </title>
+</head>
+
+<body><h1>Working...</h1>
+    <%target.forEach(function(item){ %>
+        <form id="update" method="post" action="/">
+            <input type="text" name="account" value = "<%= item.name %>">
+            <input type="text" name="amount" value = "<%= item.pass %>">
+            <input type="hidden" name="rev" value = "<%= item._rev %>"> 
+            <input type="hidden" name="id" value = "<%= item._id %>">
+            <input type="submit" value="Update">
+        </form>
+    <% }) %>
+</body>

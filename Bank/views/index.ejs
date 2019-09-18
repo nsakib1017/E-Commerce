@@ -1,0 +1,34 @@
+<head>
+    <title> Home </title>
+</head>
+
+<body><h1>Working...</h1>
+    <%accounts.forEach(function(item){ %>
+        <% if(item.value.acc!= null) { %>
+        <li><%= item.value.acc %></li>
+        <form id="delete" method="post" action="/account/delete/<%= item.key %>">
+            <input type="hidden" name="rev" value = "<%= item.value.rev %>">
+            <input type="submit" value="Delete">
+        </form>
+          <form id ="update" method ="post" action="account/update/<%=item.key%>">
+            <input type="hidden" name="rev" value ="<%= item.value.rev%>">
+            <input type="submit" value="Update">
+        </form>
+        <% } %>
+    <% }) %>
+    <form id = "id" method="post" action="/account/add">
+        <input type="text" name="account">
+        <input type="amount" name="amount">
+        <input type="submit" name="button" value= "Create">
+    </form>
+        <form id = "transact" method="post" action="/account/transaction">
+        <input type="text" name="account1">
+        <input type="text" name="account2">
+        <input type="amount" name="amount">
+        <input type="submit" name="button" value= "Transfer">
+    </form>
+        <form id = "view" method="post" action="/account/view">
+        <input type="text" name="account">
+        <input type="submit" name="button" value= "View">
+    </form>
+</body>

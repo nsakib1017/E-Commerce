@@ -1,0 +1,11 @@
+<head>
+    <title> Home </title>
+</head>
+
+<body><h1>Working...</h1>
+    <%orders.forEach(function(item){ %>
+        <% if(item.value.orderID!= null) { %>
+        <li><%= item.value.orderID %></li>
+        <% } %>
+    <% }) %>
+</body>
