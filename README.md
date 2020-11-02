@@ -1,1 +1,2 @@
 # E-Commerce
+Three entities communicate with axios api calls to create a supply chain management system. This system uses ExpressJS as the backend language and EJS as the frontend language. The Customer posts a order and commits transaction, this transaction is verfied by the bank and after verification a order is placed at the store owner end. These entities keep track of their stakeholders and can perform CRUD on various information. Here, I have used CouchDB as DBMS.
